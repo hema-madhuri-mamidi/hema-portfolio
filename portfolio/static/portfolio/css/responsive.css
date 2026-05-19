@@ -33,7 +33,8 @@
     
     /* Show Nav Links When Menu is Active */
     nav ul.active {
-        max-height: 500px;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
         padding: 15px 20px;
     }
     
@@ -326,13 +327,6 @@
     
     nav ul li a {
         font-size: 12px;
-        
-    }
-    
-    /* Hide some nav links on very small screens if needed */
-    nav ul li:nth-child(6),
-    nav ul li:nth-child(7) {
-        display: none;
     }
     
     /* Hero Section */
