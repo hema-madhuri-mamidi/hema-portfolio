@@ -33,7 +33,7 @@
     
     /* Show Nav Links When Menu is Active */
     nav ul.active {
-        max-height: 400px;
+        max-height: 500px;
         padding: 15px 20px;
     }
     
