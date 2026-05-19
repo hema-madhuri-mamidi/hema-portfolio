@@ -272,11 +272,12 @@
     }
     
     nav ul {
-        gap: 15px;
+        gap: 0px;
     }
     
     nav ul li a {
         font-size: 12px;
+        
     }
     
     /* Hide some nav links on very small screens if needed */
