@@ -1,0 +1,639 @@
+/* ==================== Responsive Design ==================== */
+
+/* Tablet Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    nav {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 20px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        flex-direction: column-reverse;
+        padding: 80px 5% 40px;
+        padding-top: calc(60px + 4rem);
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .hero-content {
+        margin-top: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 35px;
+    }
+    
+    #typing-text {
+        font-size: 25px;
+    }
+    
+    .hero-content p {
+        max-width: 100%;
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .hero-buttons a {
+        margin-right: 0;
+        width: 200px;
+        text-align: center;
+    }
+    
+    .hero-image img {
+        width: 250px;
+    }
+    
+    /* About Section */
+    .about {
+        padding: 60px 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .about h2 {
+        font-size: 2rem;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        font-size: 16px;
+        padding: 20px;
+    }
+    
+    .code-box {
+        font-size: 12px;
+        min-height: 150px;
+    }
+    
+    /* Skills Section */
+    .skills {
+        padding: 60px 5%;
+    }
+    
+    .section-title {
+        font-size: 30px;
+    }
+    
+    .skills-marquee__track {
+        animation-duration: 36s;
+    }
+    
+    .skills-marquee__group {
+        gap: 16px;
+        padding-right: 16px;
+    }
+    
+    .skill-chip {
+        padding: 14px 14px;
+        min-width: 120px;
+        min-height: 120px;
+        gap: 12px;
+    }
+
+    .skill-chip__icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .skill-chip__icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Certificates Section */
+    .certificates {
+        padding: 60px 5%;
+    }
+    
+    .certificates-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .certificate-card {
+        padding: 18px;
+    }
+
+    .certificates-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .cert-preview {
+        aspect-ratio: 16 / 11;
+    }
+    
+    .cert-link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* Projects Section */
+    .projects {
+        padding: 60px 5%;
+    }
+    
+    .projects-container {
+        gap: 30px;
+    }
+    
+    .project-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .project-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .project-card img {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .project-content {
+        text-align: center;
+    }
+    
+    .project-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .project-links a {
+        margin-right: 0;
+        width: 150px;
+        text-align: center;
+    }
+    
+    /* Coding Profiles Section */
+    .coding-profiles {
+        padding: 60px 5%;
+    }
+    
+    .profiles-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .profile-card {
+        padding: 20px;
+    }
+    
+    .profile-link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* Contact Section */
+    .contact {
+        padding: 60px 5%;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-info h3 {
+        font-size: 28px;
+    }
+    
+    .contact-info p {
+        font-size: 16px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 5%;
+    }
+    
+    .footer h2 {
+        font-size: 24px;
+    }
+    
+    .social-links a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    /* Animated Background - Reduce blob sizes for mobile */
+    .blob-1,
+    .blob-2,
+    .blob-3 {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .blob-4,
+    .blob-5 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    /* Navbar */
+    nav {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 26px;
+        font-size: 16px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 12px;
+    }
+    
+    /* Hide some nav links on very small screens if needed */
+    nav ul li:nth-child(6),
+    nav ul li:nth-child(7) {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 60px 5% 30px;
+        padding-top: calc(60px + 4.5rem);
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    #typing-text {
+        font-size: 20px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+    }
+    
+    .hero-buttons a {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 180px;
+    }
+    
+    .hero-image img {
+        width: 200px;
+    }
+    
+    /* About Section */
+    .about {
+        padding: 40px 5%;
+    }
+    
+    .about h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .about-text {
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .box {
+        padding: 15px;
+    }
+    
+    .code-box {
+        font-size: 11px;
+        padding: 15px;
+        min-height: 120px;
+    }
+    
+    /* Skills Section */
+    .skills {
+        padding: 40px 5%;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .skills-marquee__track {
+        animation-duration: 32s;
+    }
+    
+    .skill-chip {
+        padding: 10px 12px;
+        gap: 10px;
+        min-width: 100px;
+        min-height: 110px;
+    }
+    
+    .skill-chip__icon {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .skill-chip__icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .skill-chip__name {
+        font-size: 0.82rem;
+        line-height: 1.2;
+    }
+    
+    /* Certificates Section */
+    .certificates {
+        padding: 40px 5%;
+    }
+    
+    .certificates-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .certificate-card {
+        padding: 14px;
+    }
+
+    .cert-preview {
+        margin-bottom: 12px;
+        border-radius: 10px;
+    }
+    
+    .certificate-card h3 {
+        font-size: 17px;
+    }
+
+    .cert-badge {
+        font-size: 10px;
+    }
+    
+    .cert-desc {
+        font-size: 14px;
+    }
+    
+    .cert-topics span {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    /* Projects Section */
+    .projects {
+        padding: 40px 5%;
+    }
+    
+    .project-card {
+        padding: 15px;
+    }
+    
+    .project-content h1 {
+        font-size: 20px;
+    }
+    
+    .project-content p {
+        font-size: 14px;
+    }
+    
+    .project-content span {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    /* Coding Profiles Section */
+    .coding-profiles {
+        padding: 40px 5%;
+    }
+    
+    .profiles-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .profile-card {
+        padding: 16px;
+    }
+    
+    .profile-card h3 {
+        font-size: 18px;
+    }
+    
+    .profile-tagline {
+        font-size: 14px;
+    }
+    
+    /* Contact Section */
+    .contact {
+        padding: 40px 5%;
+    }
+    
+    .contact-info h3 {
+        font-size: 24px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .contact-form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 20px 5%;
+    }
+    
+    .footer h2 {
+        font-size: 20px;
+    }
+    
+    .footer p {
+        font-size: 14px;
+    }
+    
+    .social-links a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+    
+    .footer-copy {
+        font-size: 12px;
+    }
+    
+    /* Animated Background - Further reduce for small screens */
+    .blob {
+        filter: blur(60px);
+    }
+    
+    .blob-1,
+    .blob-2,
+    .blob-3 {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .blob-4,
+    .blob-5 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Theme toggle */
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Large Desktop Screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+    .hero-content h1 {
+        font-size: 65px;
+    }
+    
+    #typing-text {
+        font-size: 40px;
+    }
+    
+    .hero-content p {
+        max-width: 600px;
+        font-size: 18px;
+    }
+    
+    .hero-image img {
+        width: 400px;
+    }
+    
+    .section-title {
+        font-size: 48px;
+    }
+    
+    .skills-marquee__track {
+        animation-duration: 48s;
+    }
+    
+    .project-card img {
+        width: 450px;
+    }
+}
+
+/* Ultra-wide screens (1920px and above) */
+@media screen and (min-width: 1920px) {
+    .hero {
+        padding: 100px 15%;
+        padding-top: calc(60px + 3rem);
+    }
+    
+    .hero-content h1 {
+        font-size: 75px;
+    }
+    
+    #typing-text {
+        font-size: 45px;
+    }
+    
+    .hero-image img {
+        width: 450px;
+    }
+    
+    .skills,
+    .certificates,
+    .projects,
+    .coding-profiles,
+    .contact {
+        padding: 120px 15%;
+    }
+    
+    .about {
+        padding: 100px 15%;
+    }
+}
+
+/* Landscape mode for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 40px 5%;
+        min-height: auto;
+    }
+    
+    .hero-image img {
+        width: 200px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px;
+    }
+    
+    #typing-text {
+        font-size: 18px;
+    }
+    
+    .blob {
+        filter: blur(50px);
+    }
+}
+
+/* Print styles */
+@media print {
+    .animated-background,
+    .theme-toggle,
+    .hero-buttons {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    nav {
+        position: static;
+        background: white;
+        border-bottom: 1px solid #000;
+        padding-bottom: 0px;
+    }
+    
+    a {
+        color: black;
+    }
+}

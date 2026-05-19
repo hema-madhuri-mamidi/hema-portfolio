@@ -1,0 +1,260 @@
+/* ==================== Glassmorphism Effects ==================== */
+.about-text,
+.box,
+.skill-chip,
+.certificate-card,
+.profile-card,
+.project-card,
+.contact-info,
+.contact-form {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced glass effect for cards */
+.skill-chip,
+.certificate-card,
+.profile-card,
+.project-card,
+.box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #38BDF8;
+}
+
+[data-theme="light"] .skill-chip,
+[data-theme="light"] .certificate-card,
+[data-theme="light"] .profile-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .box {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #38BDF8;
+}
+
+/* ==================== Enhanced Glow Effects ==================== */
+.logo {
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+    50% {
+        box-shadow: 0 0 35px var(--accent-glow), 0 0 50px var(--accent-glow);
+    }
+}
+
+/* Enhanced hover glow for cards */
+.skill-chip:hover,
+.project-card:hover,
+.box:hover,
+.about-text:hover {
+    box-shadow: 0 0 30px var(--accent-glow), 0 0 60px var(--accent-glow);
+}
+
+.certificate-card:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22), 0 0 18px var(--accent-glow);
+}
+
+.certificate-card--nptel:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 22px var(--accent-glow);
+}
+
+.skill-chip:hover {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2), 0 0 14px var(--accent-glow);
+}
+
+.profile-card:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22), 0 0 18px var(--accent-glow);
+}
+
+/* Button glow effects */
+.hero-buttons a,
+.project-links a,
+.cert-link,
+.profile-link,
+.contact-form button {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-buttons a::before,
+.project-links a::before,
+.cert-link::before,
+.profile-link::before,
+.contact-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.hero-buttons a:hover::before,
+.project-links a:hover::before,
+.cert-link:hover::before,
+.profile-link:hover::before,
+.contact-form button:hover::before {
+    left: 100%;
+}
+
+/* ==================== Floating Effects ==================== */
+.hero-image {
+    animation: float-image 4s ease-in-out infinite;
+}
+
+@keyframes float-image {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Subtle floating for important elements */
+.section-title {
+    animation: float-title 4s ease-in-out infinite;
+}
+
+@keyframes float-title {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ==================== Enhanced Border Effects ==================== */
+.skill-chip,
+.certificate-card,
+.profile-card,
+.project-card,
+.box,
+.about-text {
+    position: relative;
+}
+
+.skill-chip::before,
+.certificate-card::before,
+.profile-card::before,
+.project-card::before,
+.box::before,
+.about-text::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--accent-color), transparent, var(--accent-color));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-chip:hover::before,
+.certificate-card:hover::before,
+.profile-card:hover::before,
+.project-card:hover::before,
+.box:hover::before,
+.about-text:hover::before {
+    opacity: 0.3;
+}
+
+/* ==================== Input Field Enhancements ==================== */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 20px var(--accent-glow);
+    border-color: var(--accent-color);
+}
+
+/* ==================== Code Box Enhancement ==================== */
+.code-box {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #38BDF8;
+}
+
+[data-theme="light"] .code-box {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #38BDF8;
+}
+
+/* ==================== Contact Section Enhancement ==================== */
+.contact-info,
+.contact-form {
+    border: 1px solid #38BDF8;
+}
+
+[data-theme="light"] .contact-info,
+[data-theme="light"] .contact-form {
+    border: 1px solid #38BDF8;
+}
+
+/* ==================== Hero Content Enhancement ==================== */
+.hero-content h1 {
+    text-shadow: 0 0 30px var(--accent-glow);
+}
+
+/* ==================== Navbar Link Enhancement ==================== */
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ==================== Social Links Enhancement ==================== */
+.social-links a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--accent-glow);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: -1;
+}
+
+.social-links a:hover::before {
+    width: 40px;
+    height: 40px;
+}
+
+/* ==================== Smooth Transitions ==================== */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Exclude from transition for performance */
+.animated-background,
+.blob,
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    transition: none;
+}
