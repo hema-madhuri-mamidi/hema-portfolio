@@ -1,9 +1,11 @@
-from django.conf import settings
+import os
+
 from django.contrib import messages
-from django.core.mail import BadHeaderError, send_mail
+from django.core.mail import BadHeaderError
 from django.shortcuts import redirect, render
 
 from .forms import ContactForm
+from utils.email_service import send_email
 
 
 def home(request):
@@ -18,14 +20,9 @@ def home(request):
             f'Message:\n{form.cleaned_data["message"]}'
         )
         try:
-            print(settings.EMAIL_HOST_USER)
-            send_mail(
-                subject,
-                body,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.EMAIL_HOST_USER],
-                fail_silently=False,
-            )
+            recipient = os.getenv('EMAIL_HOST_USER')
+            if not recipient or not send_email(recipient, subject, body):
+                raise Exception('Email service failed.')
         except BadHeaderError:
             messages.error(request, 'Invalid header found. Please try again.')
         # except Exception:
