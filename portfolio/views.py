@@ -28,8 +28,11 @@ def home(request):
             )
         except BadHeaderError:
             messages.error(request, 'Invalid header found. Please try again.')
-        except Exception:
-            messages.error(request, 'Sorry, your message could not be sent right now. Please try again later.')
+        # except Exception:
+        #     messages.error(request, 'Sorry, your message could not be sent right now. Please try again later.')
+        except Exception as e:
+            print("EMAIL ERROR:", e)
+            messages.error(request, f"EMAIL ERROR: {e}")
         else:
             messages.success(request, 'Thank you! Your message was sent successfully.')
             return redirect(request.path + '#contact')
